@@ -13,7 +13,7 @@ import nodeLogo from "../../images/node_logo.png";
 import tailwindLogo from "../../images/tailwind_logo.png";
 import bootstrapLogo from "../../images/bootstrap_logo.png";
 import sequelizeLogo from "../../images/sequelize_logo.png";
-import jsLogo from "../../images/js_logo.png";
+import jsLogo from "../../images/js_Logo.png";
 import circle3d from "../../images/3d_circle_gif.gif";
 import instaclone from "../../images/instaclone.png";
 import youtubeclone from "../../images/youtubeClone.jpg";
