@@ -19,7 +19,7 @@ import nodeLogo from "../images/node_logo.png";
 import tailwindLogo from "../images/tailwind_logo.png";
 import bootstrapLogo from "../images/bootstrap_logo.png";
 import sequelizeLogo from "../images/sequelize_logo.png";
-import jsLogo from "../images/js_logo.png";
+import jsLogo from "../images/js_Logo.png";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextReveal_vertical } from "../animation/TextReveal_vertical";
 import { UniversalFadeUp } from "../animation/UniversalFadeUp";
