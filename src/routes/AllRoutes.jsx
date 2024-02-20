@@ -6,7 +6,7 @@ import About from "../pages/About";
 import Work from "../pages/Work";
 import Contact from "../pages/Contact";
 import { Learn } from "../pages/Learn";
-import  Blog  from "../pages/Blog";
+import Blog from "../pages/Blog";
 import { AnimatePresence } from "framer-motion";
 
 export const AllRoutes = () => {
@@ -21,8 +21,8 @@ export const AllRoutes = () => {
             </ProtectedRoutes>
           }
         >
-          <Route index element={<Navigate replace to={"home"} />} />
-          <Route path="/home" element={<Home />} />
+          {/* <Route index element={<Navigate replace to={"home"} />} /> */}
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/work" element={<Work />} />
           <Route path="/contact" element={<Contact />} />
