@@ -35,7 +35,7 @@ export const Navigation = ({ show }) => {
       <motion.nav className="mainNav overflow-hidden" {...variationNav}>
         <ul>
           <li className="overflow-hidden">
-            <Link to={"/home"} className="navLink">
+            <Link to={"/"} className="navLink">
               Home
             </Link>
           </li>
