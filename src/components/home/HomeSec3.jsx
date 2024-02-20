@@ -117,7 +117,7 @@ export const HomeSec3 = ({ scrollTriggered }) => {
             duration: 3,
             ease: "power1.out",
           },
-          0
+          0,
         )
         .to(
           ".rotatingImg",
@@ -128,7 +128,7 @@ export const HomeSec3 = ({ scrollTriggered }) => {
             opacity: 1,
             ease: "power1.out",
           },
-          0
+          0,
         );
       // rotate(360deg) translateY(144px) scale(7.5)
       let imageHole = gsap.timeline({
@@ -152,7 +152,7 @@ export const HomeSec3 = ({ scrollTriggered }) => {
             duration: 5,
             ease: "power1.inOut",
           },
-          0
+          0,
         )
         .to(".rotatingImg", {
           display: "none",

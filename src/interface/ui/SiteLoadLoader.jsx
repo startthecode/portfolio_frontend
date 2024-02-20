@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+
+import logo from "../../images/Logo-white.png";
+
 import Logo from "../../images/Logo-white.png";
+
 import { useScreenSize } from "../../hooks/useScreenSize";
 export const SiteLoadLoader = () => {
   let [isSiteLoaded, setIsSiteLoaded] = useState(false);
