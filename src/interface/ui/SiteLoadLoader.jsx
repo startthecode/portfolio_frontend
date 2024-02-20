@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+
 import logo from "../../images/Logo-white.png";
+
+import Logo from "../../images/Logo-white.png";
+
 import { useScreenSize } from "../../hooks/useScreenSize";
 export const SiteLoadLoader = () => {
   let [isSiteLoaded, setIsSiteLoaded] = useState(false);
@@ -50,7 +54,7 @@ export const SiteLoadLoader = () => {
           <motion.img
             className={`h-[160px]  absolute top-[-80px] left-[50%] translate-x-[-50%]`}
             key={isSiteLoaded}
-            src={logo}
+            src={Logo}
             alt=""
             initial={{
               ...(isSiteLoaded && {
