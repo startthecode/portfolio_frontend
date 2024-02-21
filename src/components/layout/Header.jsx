@@ -11,10 +11,10 @@ export const Header = () => {
         <div className="container flex_v_center justify-between py-[2.5rem] fixed left-[50%] translate-x-[-50%] z-[100] !px-0">
           <div className="logo basis-auto relative z-50">
             <Link to={"/"}>
-              <Logo className={"md:h-[100px] h-[80px] md:w-[100px] w-[80px]"} />
+              <Logo className="md:h-[100px] h-[80px] md:w-[100px] w-[80px]" />
             </Link>
           </div>
-          <Navigation show={navigation} />
+          <Navigation show={navigation} hideNav={() => setNavigation(false)} />
           <div className="contact_us basis-auto md:block hidden">
             <Link to={"/contact"} className="btn primary btn-lg ">
               Contact

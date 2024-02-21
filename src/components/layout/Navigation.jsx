@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import bgvideo from "../../images/bg-menu.mp4";
 import { useScreenSize } from "../../hooks/useScreenSize";
-export const Navigation = ({ show }) => {
+export const Navigation = ({ show, hideNav }) => {
   let [showNav, setShowNav] = useState(false);
   let isLargeDevice = useScreenSize("sm", true);
   let variationNav =
@@ -35,17 +35,25 @@ export const Navigation = ({ show }) => {
       <motion.nav className="mainNav overflow-hidden" {...variationNav}>
         <ul>
           <li className="overflow-hidden">
-            <Link to={"/"} className="navLink">
+            <Link to={"/"} className="navLink" onClick={() => hideNav(false)}>
               Home
             </Link>
           </li>
           <li className="overflow-hidden">
-            <Link to={"/about"} className="navLink">
+            <Link
+              to={"/about"}
+              className="navLink"
+              onClick={() => hideNav(false)}
+            >
               About
             </Link>
           </li>
           <li className="overflow-hidden">
-            <Link to={"/work"} className="navLink">
+            <Link
+              to={"/work"}
+              className="navLink"
+              onClick={() => hideNav(false)}
+            >
               Work
             </Link>
           </li>
@@ -53,7 +61,11 @@ export const Navigation = ({ show }) => {
             <Link className="navLink"> Learn</Link>
           </li> */}
           <li className="overflow-hidden">
-            <Link to={"/blog"} className="navLink">
+            <Link
+              to={"/blog"}
+              className="navLink"
+              onClick={() => hideNav(false)}
+            >
               Blog
             </Link>
           </li>

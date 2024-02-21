@@ -8,9 +8,7 @@ export const SiteLoadLoader = () => {
   let isLargeDevice = useScreenSize("sm", true);
   useEffect(() => {
     window.onload = () => {
-      setTimeout(() => {
-        setIsSiteLoaded(true);
-      }, 1000);
+      setIsSiteLoaded(true);
     };
   });
   return (

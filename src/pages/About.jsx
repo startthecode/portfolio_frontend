@@ -28,6 +28,8 @@ import { RevealRotate } from "../animation/RevealRotate";
 import { SkillCard } from "../components/layout/SkillCard";
 import { InnerPage_heroSec } from "../components/layout/InnerPage_heroSec";
 import { FlareImages } from "../components/layout/FlareImages";
+import { Helmet } from "react-helmet";
+import { headElements } from "../constant/headElements";
 
 gsap.registerPlugin(ScrollTrigger);
 const About = () => {
@@ -48,6 +50,15 @@ const About = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{headElements.about.title}</title>
+        <meta name="description" content={headElements.about.description} />
+        <meta property="og:title" content={headElements.about.title} />
+        <meta
+          property="og:description"
+          content={headElements.about.description}
+        />
+      </Helmet>
       <InnerPage_heroSec
         subheading="Ashish Prajapati"
         heading="Full Stack Developer"

@@ -5,11 +5,22 @@ import { UniversalFadeUp } from "../animation/UniversalFadeUp";
 import { Icon } from "@iconify/react";
 import astronaut from "../images/astronout-gif.gif";
 import { MagneticHover } from "../animation/MagneticHover";
+import { Helmet } from "react-helmet";
+import { headElements } from "../constant/headElements";
 
 const Contact = () => {
-  useEffect(() => {}, []);
+
   return (
     <div>
+      <Helmet>
+        <title>{headElements.contact.title}</title>
+        <meta name="description" content={headElements.contact.description} />
+        <meta property="og:title" content={headElements.contact.title} />
+        <meta
+          property="og:description"
+          content={headElements.contact.description}
+        />
+      </Helmet>
       <InnerPage_heroSec
         subheading="Let's Collaborate on Your Next Project"
         heading="Get in Touch"

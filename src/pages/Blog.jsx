@@ -4,10 +4,22 @@ import { InnerPage_heroSec } from "../components/layout/InnerPage_heroSec";
 import OverlayTextReveal from "../animation/OverlayTextReveal";
 import { MagneticHover } from "../animation/MagneticHover";
 import { UniversalFadeUp } from "../animation/UniversalFadeUp";
+import { Helmet } from "react-helmet";
+import { headElements } from "../constant/headElements";
 
 export const Blog = () => {
   return (
     <>
+      <Helmet>
+        <title>{headElements.blog.title}</title>
+        <meta name="description" content={headElements.blog.description} />
+        <meta property="og:title" content={headElements.blog.title} />
+        <meta
+          property="og:description"
+          content={headElements.blog.description}
+        />
+      </Helmet>
+
       <InnerPage_heroSec
         subheading="Insights, Tutorials, and Tech Musings"
         heading="Explore Blog Posts"

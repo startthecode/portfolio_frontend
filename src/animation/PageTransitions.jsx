@@ -9,7 +9,7 @@ const PageTransitions = (AnimateComponent) => {
         className="slide-in !glass_effect"
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 0 }}
-        exit={{ scaleX: 1, borderRadius: "10rem 10rem 0 0" }}
+        exit={{ scaleX: 1 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
       />
       <motion.div

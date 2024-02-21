@@ -29,11 +29,11 @@ export const HomeHero = () => {
                         className="text-color3 text-[9rem] mx-20 "
                         icon="fluent:text-asterisk-20-regular"
                       />
-                      Possibilities as a{" "}
+                      Possibilities as a
                       <Icon
                         className="text-color3 text-[9rem] mx-20 "
                         icon="fluent:text-asterisk-20-regular"
-                      />{" "}
+                      />
                       Full Stack Maestro
                     </div>
                   </Marquee>

@@ -13,6 +13,8 @@ import { MagneticHover } from "../animation/MagneticHover";
 import upcomingProjectsVideo from "../images/uplcoming_projects.mp4";
 import { useEffect, useState } from "react";
 import { useScreenSize } from "../hooks/useScreenSize";
+import { Helmet } from "react-helmet";
+import { headElements } from "../constant/headElements";
 
 const Work = () => {
   let isLargeDevice = useScreenSize("lg", true);
@@ -62,6 +64,15 @@ const Work = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>{headElements.work.title}</title>
+        <meta name="description" content={headElements.work.description} />
+        <meta property="og:title" content={headElements.work.title} />
+        <meta
+          property="og:description"
+          content={headElements.work.description}
+        />
+      </Helmet>
       <InnerPage_heroSec
         subheading="Building Innovative Solutions Across the Tech Stack"
         heading="My Full Stack Journey"
