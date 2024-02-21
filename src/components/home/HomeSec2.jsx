@@ -57,15 +57,18 @@ export const HomeSec2 = ({ scrollTriggered }) => {
                   }}
                 >
                   <div>
-
                     <Icon
-                  className=" inline-block text-[3rem] mx-5 text-color3"
-                  icon="fluent:text-asterisk-20-regular"
-                />  
+                      className=" inline-block text-[3rem] mx-5 text-color3"
+                      icon="fluent:text-asterisk-20-regular"
+                    />
                   </div>
                   <h2>
-                    Explore my <Link to={""}> GitHub </Link> project! Dive into
-                    code, witness innovation. Feedback welcome!
+                    Explore my
+                    <a target="_blank" href="https://github.com/startthecode">
+                      GitHub
+                    </a>
+                    project! Dive into code, witness innovation. Feedback
+                    welcome!
                   </h2>
                 </motion.div>
               )}

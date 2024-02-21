@@ -90,11 +90,11 @@ export let initGSAPThemescroll = (callback, disableObserver) => {
       intentObserver.disable();
       document.documentElement.classList.remove("overflow-hidden");
       document.body.classList.remove("overflow-hidden");
-      gsap.to(window, {
-        scrollTo: screen.height,
-        duration: 0.8,
-        ease: "linear",
-      });
+      // gsap.to(window, {
+      //   scrollTo: screen.height,
+      //   duration: 0.8,
+      //   ease: "linear",
+      // });
     }
     animating = true;
 

@@ -40,10 +40,11 @@ export const SkillCard = ({ skilllogo, skillname, percent = "00" }) => {
 
     hoverCard.animation = slideNumberTimeline;
 
-    hoverCard.addEventListener("mouseenter", () => {
+    hoverCard.addEventListener("mouseover", () => {
       hoverCard.animation.play();
     });
     hoverCard.addEventListener("mouseout", () => {
+      console.log("mouseout");
       hoverCard.animation.reverse();
     });
 

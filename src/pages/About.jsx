@@ -30,7 +30,7 @@ import { InnerPage_heroSec } from "../components/layout/InnerPage_heroSec";
 import { FlareImages } from "../components/layout/FlareImages";
 import { Helmet } from "react-helmet";
 import { headElements } from "../constant/headElements";
-
+import githubIconLG from "../images/large_github_Icon.png";
 gsap.registerPlugin(ScrollTrigger);
 const About = () => {
   let skillsArray = [
@@ -49,7 +49,7 @@ const About = () => {
   ];
 
   return (
-    <>
+    <div className="w-full overflow-hidden">
       <Helmet>
         <title>{headElements.about.title}</title>
         <meta name="description" content={headElements.about.description} />
@@ -65,7 +65,7 @@ const About = () => {
         pera="Full Stack Developer: Crafting seamless digital experiences, from front-end elegance to back-end efficiency, mastering versatile technologies."
       />
 
-      <div className="container overflow-hidden">
+      <div className="container">
         <div className="flex items-center justify-center flex-col max-w-[1100px] mx-auto">
           <TextReveal_vertical
             text="As a seasoned full-stack developer rooted in Apeldoorn since 2020, I seamlessly blend innovation with code. My journey is fueled by a passion for backend development with precision."
@@ -89,7 +89,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="container md:mt-[14rem] mt-[10rem] overflow-hidden">
+      <div className="container md:mt-[14rem] mt-[10rem] ">
         <div className="flex flex-wrap mx-[-15px]">
           <div className="md:basis-6/12 basis-full relative">
             {skillsArray.map(({ name, logo, percentage }, index) => {
@@ -122,7 +122,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="container overflow-hidden">
+      <div className="container">
         <div className="max-w-[1000px] mx-auto md:mt-[12rem] mt-[8rem] flex flex-col items-centr justify-center">
           <OverlayTextReveal>
             <h1 className="2xl:text-[6rem] lg:text-[6rem] text-[4rem] 2xl:leading-[8rem] lg:leading-[7rem] leading-[4.5rem] uppercase font-light text-color2 whitespace-nowrap">
@@ -172,7 +172,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="lg:block hidden overflow-hidden">
+      <div className="lg:block hidden ">
         <FlareImages
           imagesArray={[
             todoImage,
@@ -185,7 +185,7 @@ const About = () => {
         >
           <UniversalFadeUp initialPosition="translate-y-[60%] opacity-0">
             <img
-              src="https://static-00.iconduck.com/assets.00/github-icon-2048x1988-jzvzcf2t.png"
+              src={githubIconLG}
               className="h-[10rem] mx-auto w-[10rem] mb-[3rem] object-center"
               alt=""
             />
@@ -197,17 +197,21 @@ const About = () => {
             </p>
           </UniversalFadeUp>
           <UniversalFadeUp initialPosition="translate-y-[60%] opacity-0">
-            <button className="btn primary btn-lg mx-auto block mt-[3rem]">
+            <a
+              href="https://github.com/startthecode"
+              target="_blank"
+              className="btn primary btn-lg mx-auto block max-w-max mt-[3rem] flex_all_center"
+            >
               Explore
-            </button>
+            </a>
           </UniversalFadeUp>
         </FlareImages>
       </div>
 
-      <div className="block lg:hidden py-[8rem] bg-color1 overflow-hidden">
+      <div className="block lg:hidden py-[8rem] bg-color1 ">
         <UniversalFadeUp initialPosition="translate-y-[60%] opacity-0">
           <img
-            src="https://static-00.iconduck.com/assets.00/github-icon-2048x1988-jzvzcf2t.png"
+            src={githubIconLG}
             className="h-[10rem] mx-auto w-[10rem] mb-[3rem] object-center"
             alt=""
           />
@@ -224,7 +228,7 @@ const About = () => {
           </button>
         </UniversalFadeUp>
       </div>
-    </>
+    </div>
   );
 };
 export default PageTransitions(About);

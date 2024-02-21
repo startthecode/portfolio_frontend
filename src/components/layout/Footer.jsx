@@ -4,14 +4,16 @@ import { motion } from "framer-motion";
 // import { Marquee } from "../../animation/Marquee";
 import { useGSAP } from "@gsap/react";
 import { useEffect, useRef, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import gsap from "gsap";
 import { Marquee } from "../../animation/Marquee";
 import OverlayTextReveal from "../../animation/OverlayTextReveal";
 import { TextReveal_vertical } from "../../animation/TextReveal_vertical";
 import { UniversalFadeUp } from "../../animation/UniversalFadeUp";
 import { useScreenSize } from "../../hooks/useScreenSize";
-
+import instaIcon from "../../images/instaICON.png";
+import linkedinIcon from "../../images/linkedinICON.png";
+import gmailIcon from "../../images/gmailICON.webp";
 export const Footer = ({ scrollTriggered }) => {
   let [active, setactive] = useState(false);
   let location = useLocation();
@@ -33,7 +35,7 @@ export const Footer = ({ scrollTriggered }) => {
       if (footerPosition <= 5) {
         tl.play();
       } else {
-        tl.reverse();
+        // tl.reverse();
       }
     });
   }, []);
@@ -53,21 +55,34 @@ export const Footer = ({ scrollTriggered }) => {
             />
 
             <div className="flex lg:max-w-[250px] max-w-[150px] justify-between w-full mt-[50px] mx-auto">
-              <img
-                src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png"
-                alt=""
-                className="md:h-[4rem] md:w-[4rem] h-[3rem] w-[3rem] object-contai opacity-0 ball translate-y-[-350px] translate-x-[200px]"
-              />
-              <img
-                src="https://www.iconpacks.net/icons/2/free-linkedin-logo-icon-2430-thumb.png"
-                alt=""
-                className="md:h-[4rem] md:w-[4rem] h-[3rem] w-[3rem] object-contai opacity-0 ball translate-y-[-350px] translate-x-[200px]"
-              />
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png"
-                alt=""
-                className="md:h-[4rem] md:w-[4rem] h-[3rem] w-[3rem] object-contain opacity-0 ball translate-y-[-350px] translate-x-[200px]"
-              />
+              <a
+                href="https://www.instagram.com/_ashugola_?igsh=eTc5NmpubnAxemgy&utm_source=qr"
+                target="_blank"
+              >
+                <img
+                  src={instaIcon}
+                  alt=""
+                  className="md:h-[4rem] md:w-[4rem] h-[3rem] w-[3rem] object-contai opacity-0 ball translate-y-[-350px] translate-x-[200px]"
+                />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/ashish-kumar-gola-85404823a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                target="_blank"
+              >
+                <img
+                  src={linkedinIcon}
+                  alt=""
+                  className="md:h-[4rem] md:w-[4rem] h-[3rem] w-[3rem] object-contai opacity-0 ball translate-y-[-350px] translate-x-[200px]"
+                />
+              </a>
+              <a href="mailto:agfrontenddeveloper@gmail.con" target="_blank">
+                <img
+                  src={gmailIcon}
+                  alt=""
+                  className="md:h-[4rem] md:w-[4rem] h-[3rem] w-[3rem] object-contain opacity-0 ball translate-y-[-350px] translate-x-[200px]"
+                />
+              </a>
             </div>
           </div>
 

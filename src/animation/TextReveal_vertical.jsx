@@ -8,6 +8,7 @@ export const TextReveal_vertical = ({
   animationStart,
   animationEnd,
   justify = "center",
+  delay,
 }) => {
   let arrangedText = text?.replace(/\s{2,}/g, " ");
   let revealText = arrangedText?.split(" ");
@@ -27,6 +28,7 @@ export const TextReveal_vertical = ({
         translateY: "0",
         duration: 1,
         ease: "power2.inOut",
+        ...(delay && { delay: delay }),
       });
     });
   }, [animationStart]);

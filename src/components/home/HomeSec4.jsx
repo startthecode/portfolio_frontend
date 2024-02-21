@@ -5,7 +5,9 @@ import { AnimatedTextWord } from "../../interface/ui/AnimatedTextWord";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { BounceBall } from "../../animation/BounceBall";
+import githubIconLG from "../../images/large_github_Icon.png";
 
+githubIconLG;
 export const HomeSec4 = ({ scrollTriggered }) => {
   let [active, setactive] = useState(false);
   let ref = useRef();
@@ -40,7 +42,7 @@ export const HomeSec4 = ({ scrollTriggered }) => {
                 {active && (
                   <BounceBall>
                     <img
-                      src="https://static-00.iconduck.com/assets.00/github-icon-2048x1988-jzvzcf2t.png"
+                      src={githubIconLG}
                       className="h-[30px] ml-1 block"
                       alt=""
                     />
@@ -77,14 +79,16 @@ export const HomeSec4 = ({ scrollTriggered }) => {
                 )}
                 <div className="py-[15px]"> </div>
 
-                <motion.button
+                <motion.a
+                  target="_blank"
+                  href="https://github.com/startthecode"
                   className="btn primary btn-lg "
                   initial={{ translateY: "30px", opacity: 0 }}
                   animate={{ opacity: 1, translateY: "0px" }}
                   transition={{ duration: 0.5, delay: 1.9, ease: "linear" }}
                 >
                   View GitHub
-                </motion.button>
+                </motion.a>
               </div>
             </div>
           </div>

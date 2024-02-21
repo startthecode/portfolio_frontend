@@ -9,7 +9,6 @@ import { Helmet } from "react-helmet";
 import { headElements } from "../constant/headElements";
 
 const Contact = () => {
-
   return (
     <div>
       <Helmet>
@@ -56,9 +55,12 @@ const Contact = () => {
               <UniversalFadeUp initialPosition="translate-y-[60%] opacity-0">
                 <p className="text-color2 font-light text-[3rem] lg:flex justify-between items-start md:pb-10 pb-7">
                   Email
-                  <span className="md:text-[2.4rem] text-[1.8rem] font-light block text-color2 mb-5 lg:text-end ">
+                  <a
+                    href="mailto:agfrontenddeveloper@gmail.gmail"
+                    className="md:text-[2.4rem] text-[1.8rem] font-light block text-color2 mb-5 lg:text-end "
+                  >
                     agfrontenddeveloper@gmail.gmail
-                  </span>
+                  </a>
                 </p>
                 <div className="border border-color2 relative">
                   <Icon
@@ -73,9 +75,12 @@ const Contact = () => {
               <UniversalFadeUp initialPosition="translate-y-[60%] opacity-0">
                 <p className="text-color2 font-light text-[3rem] lg:flex justify-between items-start md:pb-10 pb-7">
                   Phone
-                  <span className="md:text-[2.4rem] text-[1.8rem] font-light block text-color2 mb-5 lg:text-end ">
+                  <a
+                    href="tel:9650173941"
+                    className="md:text-[2.4rem] text-[1.8rem] font-light block text-color2 mb-5 lg:text-end "
+                  >
                     +91-9650173941
-                  </span>
+                  </a>
                 </p>
                 <div className="border border-color2 relative">
                   <Icon
@@ -91,11 +96,17 @@ const Contact = () => {
                 <p className="text-color2 font-light text-[3rem] lg:flex justify-between items-start md:pb-10 pb-7">
                   Follow on
                   <span className="md:text-[2.4rem] text-[1.8rem] font-light  text-color2 mb-5 lg:text-end  flex items-center lg:justify-end">
-                    <a className="text-color2" href="insta">
+                    <a
+                      className="text-color2"
+                      href="https://www.instagram.com/_ashugola_?igsh=eTc5NmpubnAxemgy&utm_source=qr"
+                    >
                       Instagram
                     </a>
                     <Icon icon="mdi:dot" height={25} />
-                    <a className="text-color2" href="insta">
+                    <a
+                      className="text-color2"
+                      href="https://www.linkedin.com/in/ashish-kumar-gola-85404823a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                    >
                       Linkedin
                     </a>
                   </span>

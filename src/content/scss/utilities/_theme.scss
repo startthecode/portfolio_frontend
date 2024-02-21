@@ -124,7 +124,7 @@ html.lenis {
   width: 100%;
   background-color: hsl(0, 0%, 0%);
   transform-origin: left;
-  z-index: 99;
+  z-index: 200;
 }
 .slide-out {
   position: fixed;
@@ -134,7 +134,7 @@ html.lenis {
   width: 100%;
   background-color:hsl(0, 0%, 0%);
   transform-origin: right;
-  z-index: 99;
+  z-index: 200;
 
 }
 

@@ -98,50 +98,50 @@ export const FlareImages = ({ children, imagesArray = [] }) => {
           {children}
         </div>
 
-        <div className="basis-6/12 bg-color1 revealTextFromIMageLeft h-[500px]  object-cover border-[1px] border-gray-800 rounded-[30px] overflow-hidden origin-bottom-left !p-0 firstImage">
+        <div className="basis-6/12 bg-color1 revealTextFromIMageLeft h-[500px]  object-cover border-[1px] border-gray-800 rounded-[30px] origin-bottom-left !p-0 firstImage">
           <img
             src={imagesArray[0]}
-            className="h-full w-full object-cover opacity-70"
+            className="h-full w-full object-cover opacity-70 rounded-[30px]"
             alt=""
           />
         </div>
 
-        <div className="basis-6/12 bg-color1 revealTextFromIMageRight h-[500px] object-cover border-[1px] border-gray-800 rounded-[30px] overflow-hidden origin-bottom-right !p-0 firstImage">
+        <div className="basis-6/12 bg-color1 revealTextFromIMageRight h-[500px] object-cover border-[1px] border-gray-800 rounded-[30px] origin-bottom-right !p-0 firstImage">
           <img
             src={imagesArray[1]}
-            className="h-full w-full object-cover opacity-70"
+            className="h-full w-full object-cover opacity-70 rounded-[30px]"
             alt=""
           />
         </div>
 
-        <div className="basis-6/12 bg-color1 revealTextFromIMageLeft h-[500px]  object-cover border-[1px] border-gray-800 rounded-[30px] overflow-hidden origin-bottom-left !p-0 centerImage">
+        <div className="basis-6/12 bg-color1 revealTextFromIMageLeft h-[500px]  object-cover border-[1px] border-gray-800 rounded-[30px] origin-bottom-left !p-0 centerImage">
           <img
             src={imagesArray[2]}
-            className="h-full w-full object-cover opacity-70"
+            className="h-full w-full object-cover opacity-70 rounded-[30px]"
             alt=""
           />
         </div>
 
-        <div className="basis-6/12 bg-color1 revealTextFromIMageRight h-[500px]  object-cover border-[1px] border-gray-800 rounded-[30px] overflow-hidden origin-bottom-right !p-0 centerImage">
+        <div className="basis-6/12 bg-color1 revealTextFromIMageRight h-[500px]  object-cover border-[1px] border-gray-800 rounded-[30px] origin-bottom-right !p-0 centerImage">
           <img
             src={imagesArray[3]}
-            className="h-full w-full object-cover opacity-70"
+            className="h-full w-full object-cover opacity-70 rounded-[30px]"
             alt=""
           />
         </div>
 
-        <div className="basis-6/12 bg-color1 revealTextFromIMageLeft h-[500px] notcenter object-cover border-[1px] border-gray-800 rounded-[30px] overflow-hidden origin-bottom-left !p-0 lastImage">
+        <div className="basis-6/12 bg-color1 revealTextFromIMageLeft h-[500px] notcenter object-cover border-[1px] border-gray-800 rounded-[30px] origin-bottom-left !p-0 lastImage">
           <img
             src={imagesArray[4]}
-            className="h-full w-full object-cover opacity-70"
+            className="h-full w-full object-cover opacity-70 rounded-[30px]"
             alt=""
           />
         </div>
 
-        <div className="basis-6/12 bg-color1 revealTextFromIMageRight h-[500px] notcenter object-cover border-[1px] border-gray-800 rounded-[30px] overflow-hidden origin-bottom-right !p-0 lastImage">
+        <div className="basis-6/12 bg-color1 revealTextFromIMageRight h-[500px] notcenter object-cover border-[1px] border-gray-800 rounded-[30px] origin-bottom-right !p-0 lastImage">
           <img
             src={imagesArray[5]}
-            className="h-full w-full object-cover opacity-70"
+            className="h-full w-full object-cover opacity-70 rounded-[30px]"
             alt=""
           />
         </div>

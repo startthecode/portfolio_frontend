@@ -28,7 +28,7 @@ const Home = () => {
   }, []);
   return (
     <>
-      {/* <Helmet>
+      <Helmet>
         <title>{headElements.home.title}</title>
         <meta name="description" content={headElements.home.description} />
         <meta property="og:title" content={headElements.home.title} />
@@ -36,7 +36,7 @@ const Home = () => {
           property="og:description"
           content={headElements.home.description}
         />
-      </Helmet> */}
+      </Helmet>
       <div className="observers relative h-[100svh] w-full overflow-hidden bg-color1">
         <HomeHero />
         <HomeSec2 scrollTriggered={scrollTriggered} />

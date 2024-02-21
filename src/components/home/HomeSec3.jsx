@@ -23,6 +23,7 @@ import { AnimatedTextWord } from "../../interface/ui/AnimatedTextWord";
 import { useScreenSize } from "../../hooks/useScreenSize";
 import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 export const HomeSec3 = ({ scrollTriggered }) => {
   let isLargeDevice = useScreenSize("lg", true);
   let lenisRef = useRef();
@@ -236,9 +237,12 @@ export const HomeSec3 = ({ scrollTriggered }) => {
                   />
 
                   <div className="fadeUp lg:opacity-0 lg:translate-y-[40px]">
-                    <a href="#" className="btn secondary btn-lg mt-[5rem]  ">
+                    <Link
+                      to="/contact"
+                      className="btn secondary btn-lg mt-[5rem]  "
+                    >
                       Hire Me
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -455,11 +459,11 @@ export const HomeSec3 = ({ scrollTriggered }) => {
                       />
                       <h2 className="text-color2 md:text-[4rem] text-[3rem] font-light leading-[50px] mt-[10px] px-[20px]">
                         {" "}
-                        Insta Clone
+                        Be Freinds
                       </h2>
                       <p className="text-color2 text-[18px] font-extralight flex items-center uppercase px-[20px]">
                         {" "}
-                        Frontend and backend{" "}
+                        React and node js
                       </p>
                     </div>
 
@@ -471,11 +475,11 @@ export const HomeSec3 = ({ scrollTriggered }) => {
                       />
                       <h2 className="text-color2 md:text-[4rem] text-[3rem] font-light leading-[50px] mt-[10px] px-[20px]">
                         {" "}
-                        Youtube Clone
+                        Game Streamer
                       </h2>
                       <p className="text-color2 text-[18px] font-extralight flex items-center uppercase px-[20px]">
                         {" "}
-                        Frontend and backend{" "}
+                        React and node js
                       </p>
                     </div>
 
@@ -487,11 +491,11 @@ export const HomeSec3 = ({ scrollTriggered }) => {
                       />
                       <h2 className="text-color2 md:text-[4rem] text-[3rem] font-light leading-[50px] mt-[10px] px-[20px]">
                         {" "}
-                        myschool
+                        MRV School
                       </h2>
                       <p className="text-color2 text-[18px] font-extralight flex items-center uppercase px-[20px]">
                         {" "}
-                        Node js api's
+                        Rest API using node js
                       </p>
                     </div>
                   </div>

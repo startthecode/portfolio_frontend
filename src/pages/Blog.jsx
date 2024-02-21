@@ -6,6 +6,7 @@ import { MagneticHover } from "../animation/MagneticHover";
 import { UniversalFadeUp } from "../animation/UniversalFadeUp";
 import { Helmet } from "react-helmet";
 import { headElements } from "../constant/headElements";
+import dummyImage from "../images/motion_dummy.jpg";
 
 export const Blog = () => {
   return (
@@ -37,7 +38,7 @@ export const Blog = () => {
               <Link to={"/blog/blogid"} className="">
                 <MagneticHover magneticValue={0.01}>
                   <img
-                    src="https://framerusercontent.com/images/PsIlsU4MkmD8LBweO6ZAcx4Avs.jpg?scale-down-to=1024"
+                    src={dummyImage}
                     className="rounded-[3rem] md:h-[40rem] h-[30rem] w-full object-cover"
                     alt=""
                   />
@@ -65,7 +66,7 @@ export const Blog = () => {
               <Link to={"/blog/blogid"} className="">
                 <MagneticHover magneticValue={0.01}>
                   <img
-                    src="https://framerusercontent.com/images/PsIlsU4MkmD8LBweO6ZAcx4Avs.jpg?scale-down-to=1024"
+                    src={dummyImage}
                     className="rounded-[3rem] md:h-[40rem] h-[30rem] w-full object-cover"
                     alt=""
                   />
@@ -93,7 +94,7 @@ export const Blog = () => {
               <Link to={"/blog/blogid"} className="">
                 <MagneticHover magneticValue={0.01}>
                   <img
-                    src="https://framerusercontent.com/images/PsIlsU4MkmD8LBweO6ZAcx4Avs.jpg?scale-down-to=1024"
+                    src={dummyImage}
                     className="rounded-[3rem] md:h-[40rem] h-[30rem] w-full object-cover"
                     alt=""
                   />

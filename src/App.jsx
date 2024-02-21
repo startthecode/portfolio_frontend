@@ -11,7 +11,7 @@ function App() {
     <>
       <AllRoutes />
       {showCursor && <Cursor />}
-      <SiteLoadLoader />
+      {/* <SiteLoadLoader /> */}
     </>
   );
 }

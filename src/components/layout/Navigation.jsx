@@ -2,58 +2,71 @@ import { Icon } from "@iconify/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import bgvideo from "../../images/bg-menu.mp4";
-import { useScreenSize } from "../../hooks/useScreenSize";
-export const Navigation = ({ show, hideNav }) => {
-  let [showNav, setShowNav] = useState(false);
-  let isLargeDevice = useScreenSize("sm", true);
-  let variationNav =
-    isLargeDevice !== true
-      ? {
-          animate: {
-            ...(showNav ? { height: "100vh" } : { height: "0" }),
-          },
-          transition: {
-            ease: "linear",
-            duration: 0.8,
-            delay: !showNav ? 0.8 : 0,
-          },
-        }
-      : "";
-  useEffect(() => {
-    if (show === true) {
-      setShowNav(show);
-    }
 
-    if (show === false) {
-      setShowNav(show);
+import { useScreenSize } from "../../hooks/useScreenSize";
+import { TextReveal_vertical } from "../../animation/TextReveal_vertical";
+import instaIcon from "../../images/instaICON.png";
+import linkedinIcon from "../../images/linkedinICON.png";
+import gmailIcon from "../../images/gmailICON.webp";
+import gsap from "gsap/gsap-core";
+export const Navigation = ({ show, hideNav }) => {
+  useEffect(() => {
+    let tl = gsap.timeline();
+
+    if (show) {
+      tl.to(".navTransition", {
+        width: "100%",
+        duration: 1,
+        ease: "power1.inOut",
+      })
+        .to(".navTransition", {
+          scaleX: 0,
+          duration: 1,
+          background: "#1e1e1e",
+          transformOrigin: "left",
+          ease: "power1.inOut",
+        })
+        .to(".navList", {
+          stagger: 0.2,
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          ease: "power1.inOut",
+        });
+    } else {
+      tl.to(".navTransition", {
+        scaleX: 1,
+        duration: 1.5,
+        background: "#000",
+        transformOrigin: "left",
+        ease: "power1.inOut",
+      }).to(".navTransition", {
+        width: "0",
+        ease: "power1.inOut",
+      });
     }
   }, [show]);
 
   return (
     <>
-      <motion.nav className="mainNav overflow-hidden" {...variationNav}>
-        <ul>
+      <nav
+        className={`mainNav overflow-hidden delay-1000 ${
+          show ? "left-0" : "left-[100%] duration-[1.3s]"
+        }`}
+      >
+        <ul className="md:flex_v_center hidden">
           <li className="overflow-hidden">
-            <Link to={"/"} className="navLink" onClick={() => hideNav(false)}>
+            <Link to={"/"} className="navLink">
               Home
             </Link>
           </li>
           <li className="overflow-hidden">
-            <Link
-              to={"/about"}
-              className="navLink"
-              onClick={() => hideNav(false)}
-            >
+            <Link to={"/about"} className="navLink">
               About
             </Link>
           </li>
           <li className="overflow-hidden">
-            <Link
-              to={"/work"}
-              className="navLink"
-              onClick={() => hideNav(false)}
-            >
+            <Link to={"/work"} className="navLink">
               Work
             </Link>
           </li>
@@ -61,67 +74,79 @@ export const Navigation = ({ show, hideNav }) => {
             <Link className="navLink"> Learn</Link>
           </li> */}
           <li className="overflow-hidden">
-            <Link
-              to={"/blog"}
-              className="navLink"
-              onClick={() => hideNav(false)}
-            >
+            <Link to={"/blog"} className="navLink">
               Blog
             </Link>
           </li>
         </ul>
-        <video
-          src={bgvideo}
-          className="h-[100svh] object-cover w-full absolute z-10 top-0 left-0 opacity-[20%] md:hidden"
-          loop
-          autoPlay
-          muted
-        ></video>
-        <div className="md:hidden block">
-          <div className="flex justify-center items-centeroverflow-hidden">
-            <motion.div
-              className=" translate-y-[100px]"
-              animate={{
-                ...(showNav ? { translateY: 0 } : { translateY: "100px" }),
-              }}
-              transition={{
-                ease: "linear",
-                duration: 0.8,
-                delay: showNav ? 0.6 : 0,
-              }}
-            >
-              <Icon
-                icon="mdi:instagram"
-                className=" text-color3 text-[38px] mx-2.5"
-              />
-            </motion.div>
 
-            <motion.div
-              className=" translate-y-[100px]"
-              animate={{
-                ...(showNav ? { translateY: 0 } : { translateY: "100px" }),
-              }}
-              transition={{
-                ease: "linear",
-                duration: 0.8,
-                delay: showNav ? 0.6 : 0,
-              }}
-            >
-              <Icon
-                icon="iconoir:linkedin"
-                className=" text-color3 text-[38px] mx-2.5"
-              />
-            </motion.div>
+        <ul className="sm:hidden block navUl">
+          <li
+            className="overflow-hidden translate-y-10 opacity-0 navList"
+            onClick={() => hideNav()}
+          >
+            <Link to={"/"} className="navLink">
+              Home
+            </Link>
+          </li>
+          <li
+            className="overflow-hidden translate-y-10 opacity-0 navList"
+            onClick={() => hideNav()}
+          >
+            <Link to={"/about"} className="navLink">
+              About
+            </Link>
+          </li>
+          <li
+            className="overflow-hidden translate-y-10 opacity-0 navList"
+            onClick={() => hideNav()}
+          >
+            <Link to={"/work"} className="navLink">
+              Work
+            </Link>
+          </li>
+          {/* <li className="overflow-hidden" onClick={()=>hideNav()}>
+            <Link className="navLink"> Learn</Link>
+          </li> */}
+          <li
+            className="overflow-hidden translate-y-10 opacity-0 navList"
+            onClick={() => hideNav()}
+          >
+            <Link to={"/blog"} className="navLink">
+              Blog
+            </Link>
+          </li>
+        </ul>
+
+        <div className="md:hidden block px-[3rem] mt-10">
+          <p className="text-[1.6rem] mb-4 text-color2 font-light tracking-wide navList translate-y-10 opacity-0 ">
+            agfrontenddeveloper@gmail.com
+          </p>
+          <p className="text-[1.6rem] mb-4 text-color2 font-light tracking-wide navList translate-y-10 opacity-0">
+            +91 9650173941
+          </p>
+
+          <div className="flex justify-start items-centeroverflow-hidden mt-10 navList translate-y-10 opacity-0">
+            <img
+              src={instaIcon}
+              alt=""
+              className="md:h-[4rem] md:w-[4rem] h-[3rem] w-[3rem] mr-4 object-contain"
+            />
+            <img
+              src={linkedinIcon}
+              alt=""
+              className="md:h-[4rem] md:w-[4rem] h-[3rem] w-[3rem] mr-4 object-contain"
+            />
+            <img
+              src={gmailIcon}
+              alt=""
+              className="md:h-[4rem] md:w-[4rem] h-[3rem] w-[3rem] mr-4 object-contain"
+            />
           </div>
         </div>
-      </motion.nav>
-      {/* <motion.div
-        key={showNav}
-        className="bg-black fixed left w-full md:hidden top-0"
-        initial={{ ...(!showNav ? { height: "0" } : { height: "100vh" }) }}
-        animate={{ ...(!showNav ? { height: "100vh" } : { height: "0" }) }}
-        transition={{ duration: 1, delay: !showNav ? 0.5 : 0 }}
-      /> */}
+
+        <div className="bg-black h-screen w-0 fixed top-0 right-0 navTransition z-[100]"></div>
+      </nav>
     </>
   );
 };

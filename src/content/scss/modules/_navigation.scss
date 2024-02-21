@@ -1,8 +1,10 @@
 .hamburger{
+  position: relative;
+  z-index: 20;
   svg {
-    height: 60px;
+    height: 45px;
     position: absolute;
-    width: 60px;
+    width: 45px;
   }
   .plates {
     display: flex;
@@ -11,8 +13,8 @@
   }
  
   .plate {
-    height: 60px;
-    width: 60px;
+    height: 45px;
+    width: 45px;
   }
   .burger {
     filter: url(#gooeyness);
@@ -66,13 +68,13 @@
 }
 
 .mainNav{
-  @apply shadow-2xl md:relative fixed left-[50%] md:translate-x-0 md:left-0 translate-x-[-50%] md:w-auto w-[101%] md:rounded-[80px] top-0 rounded-[3rem_3rem_0px_0px] md:glass_effect bg-black md:h-auto h-0 md:block flex  flex-col justify-center ;
+  @apply shadow-2xl md:relative fixed  md:translate-x-0 md:left-0  md:w-auto w-[101%] md:rounded-[80px] top-0 rounded-[3rem_3rem_0px_0px] md:glass_effect bg-black md:h-auto h-screen md:block flex  flex-col justify-center;
 
   ul {
-    @apply flex_v_center m-0 md:py-0 md:px-[1rem] py-[2rem] px-[3rem] md:flex-row flex-col flex_all_center md:h-auto relative z-20;
+    @apply  m-0 md:py-0 md:px-[1rem] py-[2rem] px-[3rem] md:flex-row flex-col md:h-auto relative z-20;
   
     li{
-      @apply lg:px-[3rem] md:px-[2rem] lg:py-[2.8rem] md:py-[2rem] text-color2 md:text-[1.6rem] py-[2rem] text-[2.5rem] text-center md:normal-case uppercase;
+      @apply lg:px-[3rem] md:px-[2rem] lg:py-[2.8rem] md:py-[2rem] text-color2 md:text-[1.6rem] sm:py-[2rem] text-[3.8rem] md:text-center md:normal-case uppercase font-light;
 
       a{
         @apply text-color2
