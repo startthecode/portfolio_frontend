@@ -119,12 +119,12 @@ export const Navigation = ({ show, hideNav }) => {
         </ul>
 
         <div className="md:hidden block px-[3rem] mt-10">
-          <p className="text-[1.6rem] mb-4 text-color2 font-light tracking-wide navList translate-y-10 opacity-0 ">
+          <a href="mailto:agfrontenddeveloper@gmail.com" className="text-[1.6rem] mb-4 text-color2 font-light tracking-wide navList translate-y-10 opacity-0 ">
             agfrontenddeveloper@gmail.com
-          </p>
-          <p className="text-[1.6rem] mb-4 text-color2 font-light tracking-wide navList translate-y-10 opacity-0">
+          </a>
+          <a href="tel:9650173941" className="text-[1.6rem] mb-4 text-color2 font-light tracking-wide navList translate-y-10 opacity-0">
             +91 9650173941
-          </p>
+          </a>
 
           <div className="flex justify-start items-centeroverflow-hidden mt-10 navList translate-y-10 opacity-0">
             <img

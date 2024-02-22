@@ -8,11 +8,12 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Helmet } from "react-helmet";
 import siteIconDark from "../images/logo-black-small.png";
+import { useScreenSize } from "../hooks/useScreenSize";
 export const AppLayout = () => {
   let ref = useRef();
   let location = useLocation();
   let [isDark, setIsDark] = useState(false);
-
+  let screenSize = useScreenSize("md");
   useEffect(() => {
     function update(time) {
       ref.current?.lenis?.raf(time * 1000);
@@ -47,7 +48,7 @@ export const AppLayout = () => {
         root
         options={{
           autoResize: true,
-          duration: 1.8,
+          duration: screenSize ? 1.8 : 1.5,
         }}
       />
       <Helmet>

@@ -7,14 +7,22 @@ export const SiteLoadLoader = () => {
   let [siteLoad, SetSiteLoad] = useState(false);
   let isLargeDevice = useScreenSize("sm", true);
   useEffect(() => {
-    window.onload = () => {
+    const handleLoad = () => {
       setIsSiteLoaded(true);
     };
-  });
+
+    // If you want to detect when all resources (images, styles, etc.) have loaded
+    window.addEventListener("load", handleLoad);
+
+    // Cleanup the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
   return (
     <>
       <motion.div
-        className="h-[100svh]  fixed top-0 bg-black flex items-center justify-center z-[100] origin-center  left-0 w-full overflow-hidden"
+        className="h-[100svh]  fixed top-0 bg-black flex items-center justify-center z-[9990] origin-center  left-0 w-full overflow-hidden"
         key={isSiteLoaded}
         initial={{
           ...(isSiteLoaded && {
@@ -61,10 +69,10 @@ export const SiteLoadLoader = () => {
             animate={{
               ...(isSiteLoaded && {
                 rotate: 0,
-                height: isLargeDevice ? "100px" : "80px",
+                height: isLargeDevice ? "100px" : "70px",
                 translateX: "0",
                 left: "15px",
-                top: "2.5rem",
+                top: "1rem",
               }),
             }}
             transition={{

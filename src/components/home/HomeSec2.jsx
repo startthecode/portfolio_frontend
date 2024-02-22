@@ -63,10 +63,10 @@ export const HomeSec2 = ({ scrollTriggered }) => {
                     />
                   </div>
                   <h2>
-                    Explore my
+                    Explore my{" "}
                     <a target="_blank" href="https://github.com/startthecode">
-                      GitHub
-                    </a>
+                      GitHub{" "}
+                    </a>{" "}
                     project! Dive into code, witness innovation. Feedback
                     welcome!
                   </h2>
