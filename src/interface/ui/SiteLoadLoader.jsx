@@ -7,16 +7,10 @@ export const SiteLoadLoader = () => {
   let [siteLoad, SetSiteLoad] = useState(false);
   let isLargeDevice = useScreenSize("sm", true);
   useEffect(() => {
-    const handleLoad = () => {
-      setIsSiteLoaded(true);
-    };
-
-    // If you want to detect when all resources (images, styles, etc.) have loaded
-    window.addEventListener("load", handleLoad);
-
-    // Cleanup the event listener when the component is unmounted
-    return () => {
-      window.removeEventListener("load", handleLoad);
+    window.onload = () => {
+      setTimeout(() => {
+        setIsSiteLoaded(true);
+      }, 1000);
     };
   }, []);
   return (
