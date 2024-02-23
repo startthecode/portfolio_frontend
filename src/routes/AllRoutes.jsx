@@ -1,12 +1,14 @@
 import { Routes, useLocation, Route, Navigate } from "react-router-dom";
 import { ProtectedRoutes } from "./ProtectedRoutes";
 import { AppLayout } from "../interface/AppLayout";
-import Home from "../pages/Home";
-import About from "../pages/About";
-import Work from "../pages/Work";
-import Contact from "../pages/Contact";
-import { Learn } from "../pages/Learn";
-import Blog from "../pages/Blog";
+import { Suspense, lazy } from "react";
+
+const Home = lazy(() => import("../pages/Home"));
+const About = lazy(() => import("../pages/About"));
+const Work = lazy(() => import("../pages/Work"));
+const Contact = lazy(() => import("../pages/Contact"));
+const Learn = lazy(() => import("../pages/Learn"));
+const Blog = lazy(() => import("../pages/Blog"));
 import { AnimatePresence } from "framer-motion";
 
 export const AllRoutes = () => {
@@ -17,7 +19,9 @@ export const AllRoutes = () => {
         <Route
           element={
             <ProtectedRoutes>
-              <AppLayout />
+              <Suspense>
+                <AppLayout />
+              </Suspense>
             </ProtectedRoutes>
           }
         >

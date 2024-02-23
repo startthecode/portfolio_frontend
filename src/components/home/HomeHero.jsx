@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 import owner from "../../images/all.png";
 import { motion } from "framer-motion";
 import { Marquee } from "../../animation/Marquee";
-export const HomeHero = () => {
+const HomeHero = () => {
   return (
     <section className="first panel">
       <div className="outer">
@@ -64,3 +64,5 @@ export const HomeHero = () => {
     </section>
   );
 };
+
+export default HomeHero;

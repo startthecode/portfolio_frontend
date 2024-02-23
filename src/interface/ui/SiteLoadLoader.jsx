@@ -72,7 +72,7 @@ export const SiteLoadLoader = () => {
                 height: isLargeDevice ? "100px" : "70px",
                 translateX: "0",
                 left: "15px",
-                top: "1rem",
+                top: isLargeDevice ? "25px" : "10px",
               }),
             }}
             transition={{

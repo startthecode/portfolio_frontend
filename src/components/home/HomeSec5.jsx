@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
-export const HomeSec5 = ({ scrollTriggered }) => {
+const HomeSec5 = ({ scrollTriggered }) => {
   let [active, setactive] = useState(false);
   let ref = useRef();
   useEffect(() => {
@@ -252,3 +252,4 @@ export const HomeSec5 = ({ scrollTriggered }) => {
     </section>
   );
 };
+export default HomeSec5;

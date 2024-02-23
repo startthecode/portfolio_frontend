@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AnimatedTextWord } from "../../interface/ui/AnimatedTextWord";
 import { Icon } from "@iconify/react";
-import { Link } from "react-router-dom";
 
-export const HomeSec2 = ({ scrollTriggered }) => {
+
+ const HomeSec2 = ({ scrollTriggered }) => {
   let [active, setactive] = useState(false);
   let ref = useRef();
   let text =
@@ -79,3 +79,5 @@ export const HomeSec2 = ({ scrollTriggered }) => {
     </section>
   );
 };
+
+export default HomeSec2;

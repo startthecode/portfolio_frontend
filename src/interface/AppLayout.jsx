@@ -8,6 +8,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Helmet } from "react-helmet";
 import siteIconDark from "../images/logo-black-small.png";
+import siteIconLight from "../images/logo-white-small.png";
 import { useScreenSize } from "../hooks/useScreenSize";
 export const AppLayout = () => {
   let ref = useRef();
@@ -52,7 +53,11 @@ export const AppLayout = () => {
         }}
       />
       <Helmet>
-        {!isDark && <link rel="icon" type="image/png" href={siteIconDark} />}
+        {!isDark ? (
+          <link rel="icon" type="image/png" href={siteIconDark} />
+        ) : (
+          <link rel="icon" type="image/png" href={siteIconLight} />
+        )}
       </Helmet>
       <Header />
       <main className="relative bg-color1">

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import astronaut from "../../images/astronout-gif.gif";
+import astronaut from "../../images/astronout-gif.mp4";
 import firebaseLogo from "../../images/firebase_logo.png";
 import reactLogo from "../../images/react_logo.png";
 import shopifyLogo from "../../images/shopify_logo.png";
@@ -14,7 +14,7 @@ import tailwindLogo from "../../images/tailwind_logo.png";
 import bootstrapLogo from "../../images/bootstrap_logo.png";
 import sequelizeLogo from "../../images/sequelize_logo.png";
 import jsLogo from "../../images/js_Logo.png";
-import circle3d from "../../images/3d_circle_gif.gif";
+import circle3d from "../../images/3d_circle_gif.mp4";
 import instaclone from "../../images/instaclone.png";
 import youtubeclone from "../../images/youtubeClone.jpg";
 import schoolapi from "../../images/schoolapi.jpg";
@@ -24,7 +24,7 @@ import { useScreenSize } from "../../hooks/useScreenSize";
 import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
-export const HomeSec3 = ({ scrollTriggered }) => {
+const HomeSec3 = ({ scrollTriggered }) => {
   let isLargeDevice = useScreenSize("lg", true);
   let lenisRef = useRef();
   useEffect(() => {
@@ -182,7 +182,10 @@ export const HomeSec3 = ({ scrollTriggered }) => {
             >
               <div className="animation2 flex flex-wrap w-full lg:h-[100svh] items-center  container relative justify-between">
                 <div className="imageAnimation lg:absolute lg:basis-6/12 basis-full lg:right-[50%] lg:translate-x-[50%]  z-10  items-center lg:h-full flex justify-center overflow-hidden lg:grayscale lg:py-0 pt-[8rem]">
-                  <img
+                  <video
+                    loop
+                    autoPlay
+                    muted
                     src={astronaut}
                     alt=""
                     className="lg:max-w-[50vw] lg:h-[70rem] object-contain object-center fixImage mix-blend-color"
@@ -247,7 +250,10 @@ export const HomeSec3 = ({ scrollTriggered }) => {
                 </div>
               </div>
 
-              <img
+              <video
+                loop
+                autoPlay
+                muted
                 src={circle3d}
                 className="w-full h-[100svh] rotatingImg fixed origin-center left-0 object-contain object-center hidden top-0"
                 alt=""
@@ -508,3 +514,5 @@ export const HomeSec3 = ({ scrollTriggered }) => {
     </section>
   );
 };
+
+export default HomeSec3;

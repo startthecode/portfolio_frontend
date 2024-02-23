@@ -8,7 +8,7 @@ import { BounceBall } from "../../animation/BounceBall";
 import githubIconLG from "../../images/large_github_Icon.png";
 
 githubIconLG;
-export const HomeSec4 = ({ scrollTriggered }) => {
+ const HomeSec4 = ({ scrollTriggered }) => {
   let [active, setactive] = useState(false);
   let ref = useRef();
 
@@ -114,3 +114,4 @@ export const HomeSec4 = ({ scrollTriggered }) => {
     </section>
   );
 };
+export default HomeSec4
