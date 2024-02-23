@@ -8,7 +8,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Helmet } from "react-helmet";
 import siteIconDark from "../images/logo-black-small.png";
-import siteIconLight from "../images/logo-white-small.png";
+import siteIconLight from "../images/Logo-white-small.png";
 import { useScreenSize } from "../hooks/useScreenSize";
 export const AppLayout = () => {
   let ref = useRef();
