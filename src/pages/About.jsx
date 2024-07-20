@@ -5,9 +5,9 @@ import { useGSAP } from "@gsap/react";
 import lmsImage from "../images/lms.jpg";
 import todoImage from "../images/todo.jpg";
 import adminPanelImage from "../images/admin-panel.jpg";
-import instaclone from "../images/instaclone.png";
-import youtubeclone from "../images/youtubeClone.jpg";
-import schoolapi from "../images/schoolapi.jpg";
+import instaclone from "../images/instaclone.webp";
+import youtubeclone from "../images/youtubeClone.webp";
+import schoolapi from "../images/schoolapi.webp";
 import firebaseLogo from "../images/firebase_logo.png";
 import reactLogo from "../images/react_logo.png";
 import shopifyLogo from "../images/shopify_logo.png";
@@ -139,7 +139,7 @@ const About = () => {
               <p className="text-color2 font-light md:text-[3rem] text-[2.4rem] md:flex justify-between items-end pb-10">
                 The Refresh Ideas
                 <span className="md:text-[2rem] text-[1.4rem] font-extralight block">
-                  2022 - Present
+                  2020 - Present
                 </span>
               </p>
               <div className="border border-color2 relative">
@@ -155,9 +155,8 @@ const About = () => {
               <p className="text-color2 font-light md:text-[3rem] text-[2.4rem] md:flex justify-between items-end pb-10">
                 The Get Enquiry
                 <span className="md:text-[2rem] text-[1.4rem] font-extralight block">
-                  2020 - 2022{" "}
+                  2019 - 2020
                   <span className="md:text-[1.4rem] text-[1.1rem]">
-                    (Frelance)
                   </span>
                 </span>
               </p>

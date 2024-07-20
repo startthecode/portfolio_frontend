@@ -15,9 +15,9 @@ import bootstrapLogo from "../../images/bootstrap_logo.png";
 import sequelizeLogo from "../../images/sequelize_logo.png";
 import jsLogo from "../../images/js_Logo.png";
 import circle3d from "../../images/3d_circle_gif.mp4";
-import instaclone from "../../images/instaclone.png";
-import youtubeclone from "../../images/youtubeClone.jpg";
-import schoolapi from "../../images/schoolapi.jpg";
+import instaclone from "../../images/instaclone.webp";
+import youtubeclone from "../../images/youtubeClone.webp";
+import schoolapi from "../../images/schoolapi.webp";
 import { useGSAP } from "@gsap/react";
 import { AnimatedTextWord } from "../../interface/ui/AnimatedTextWord";
 import { useScreenSize } from "../../hooks/useScreenSize";
@@ -480,11 +480,10 @@ const HomeSec3 = ({ scrollTriggered }) => {
                         className=" w-full md:rounded-[4rem] rounded-[2rem] md:h-[70rem] h-[40rem] object-cover object-top z-[1] relative"
                       />
                       <h2 className="text-color2 md:text-[4rem] text-[3rem] font-light leading-[50px] mt-[10px] px-[20px]">
-                        {" "}
-                        Game Streamer
+                       AP Streamings
                       </h2>
                       <p className="text-color2 text-[18px] font-extralight flex items-center uppercase px-[20px]">
-                        {" "}
+                       
                         React and node js
                       </p>
                     </div>
@@ -497,7 +496,7 @@ const HomeSec3 = ({ scrollTriggered }) => {
                       />
                       <h2 className="text-color2 md:text-[4rem] text-[3rem] font-light leading-[50px] mt-[10px] px-[20px]">
                         {" "}
-                        MRV School
+                       Free Lms API
                       </h2>
                       <p className="text-color2 text-[18px] font-extralight flex items-center uppercase px-[20px]">
                         {" "}

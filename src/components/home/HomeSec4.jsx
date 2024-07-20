@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import coder from "../../images/coder.mp4";
+import coder from "../../images/coder.webm";
 import { AnimatedTextWord } from "../../interface/ui/AnimatedTextWord";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";

@@ -3,12 +3,12 @@ import { TextReveal_vertical } from "../animation/TextReveal_vertical";
 import { UniversalFadeHorizontal } from "../animation/UniversalFadeHorizontal";
 import PageTransitions from "../animation/PageTransitions";
 import { InnerPage_heroSec } from "../components/layout/InnerPage_heroSec";
-import youtubeclone from "../images/youtubeClone.jpg";
+import youtubeclone from "../images/youtubeClone.webp";
 import lmsImage from "../images/lms.jpg";
 import todoImage from "../images/todo.jpg";
 import adminPanelImage from "../images/admin-panel.jpg";
-import instaclone from "../images/instaclone.png";
-import schoolapi from "../images/schoolapi.jpg";
+import instaclone from "../images/instaclone.webp";
+import schoolapi from "../images/schoolapi.webp";
 import { MagneticHover } from "../animation/MagneticHover";
 import upcomingProjectsVideo from "../images/uplcoming_projects.mp4";
 import { useEffect, useState } from "react";
@@ -23,7 +23,7 @@ const Work = () => {
   useEffect(() => {
     let list = [
       {
-        name: "Video Stream",
+        name: "AP Streamings",
         detail: "React js and rapid api",
         url: youtubeclone,
       },
@@ -33,7 +33,7 @@ const Work = () => {
         url: lmsImage,
       },
       {
-        name: "My school",
+        name: "Free Lms API",
         detail: "Mysql,express,node Api",
         url: schoolapi,
       },
@@ -44,12 +44,12 @@ const Work = () => {
         type: "video",
       },
       {
-        name: "Social Networking Site",
+        name: "Be Freinds",
         detail: "Mysql, express, node, react and web socket",
         url: instaclone,
       },
       {
-        name: "Todo List",
+        name: "Schedule Your Day",
         detail: "Mysql, express, node and react",
         url: todoImage,
       },
